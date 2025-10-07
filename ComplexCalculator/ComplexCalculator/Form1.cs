@@ -55,7 +55,15 @@ namespace ComplexCalculator
 
         private void c_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "0";
+            if(richTextBox1.Text.Length > 1)
+            {
+                richTextBox1.Text = richTextBox1.Text.Substring(0, richTextBox1.Text.Length - 1);
+            }
+            else
+            {
+                richTextBox1.Text = "0";
+            }
+
         }
 
         private void sqrt_Click(object sender, EventArgs e)
